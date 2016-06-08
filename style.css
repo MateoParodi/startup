@@ -1,0 +1,35 @@
+a {
+    margin-left: 25px;
+    font-family: Calibri;
+    margin-top: 0px;
+}
+
+h2 {
+    margin-bottom: 0px;
+}
+
+h1 {
+    margin-bottom: 0px;
+}
+
+h5 {
+    margin-top: 0px;
+}
+
+fieldset{
+    margin: 5px;
+}
+
+.pic{
+    width: 75px;
+    height:75px;
+    margin-left: 6px;
+}
+
+.presentation {
+    display: inline-flex;
+}
+
+.name{
+    margin-left: 12px;
+}

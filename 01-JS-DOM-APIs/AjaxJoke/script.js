@@ -10,7 +10,8 @@ function joke() {
     const xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if (xhttp.readyState == 4 && xhttp.status == 200) {
-            document.getElementById("text").innerHTML = xhttp.responseText;
+            var json = JSON.parse(xhttp.responseText);
+            document.getElementById("text").innerHTML = json.value.joke;
         }
     };
     xhttp.open("GET", "http://api.icndb.com/jokes/random", true);
