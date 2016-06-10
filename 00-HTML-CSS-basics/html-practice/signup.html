@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=10">
+    <title>Sign Up</title>
+</head>
+<body>
+    <h2>Sign Up!</h2>
+<form>
+    <div class="row">
+        <label for="name">Your name:</label><br />
+        <input id="name" class="input" name="name" type="text" value="" size="30" placeholder="your name" autofocus required/><br />
+    </div>
+    <div class="row">
+        <label for="last_name">Your last name:</label><br />
+        <input id="last_name" class="input" name="last name" type="text" value="" size="30" placeholder="your last name" required/><br />
+    </div>
+
+    <div class="row">
+        <label for="email">Your name:</label><br />
+        <input id="email" class="input" name="email" type="email" value="" size="30" placeholder="something@asd.com" required/><br />
+    </div>
+
+    <div class="row">
+        <label for="birthday">Your date of birth:</label><br />
+        <input id="birthday" class="input" name="birthday" type="date" value="" size="30" required/><br />
+    </div>
+
+    <div class="dropdown">
+        <label>Select your favorite sport:</label><br />
+    <select required>
+        <option value="football">Football</option>
+        <option value="basketball">Basketball</option>
+        <option value="hockey">Hockey</option>
+        <option value="baseball">Baseball</option>
+    </select>
+    </div>
+
+    <div class="box">
+        <label for="bio">Write some of your bio please: </label><br />
+        <textarea id="bio" class="imput" name="bio" rows="7" cols="31" placeholder="Let us know you!"></textarea>
+    </div>
+
+    <input id="submit_button" type="submit" value="Sign Up!" />
+    <input id="clear_button" type="reset" value="Clear form" />
+
+</form>
+</body>
+</html>

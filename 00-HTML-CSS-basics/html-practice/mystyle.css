@@ -1,0 +1,18 @@
+/*#test{*/
+    /*opacity:1;*/
+    /*transition: opacity 2s;*/
+/*}*/
+section {
+
+    text-align: center;
+
+}
+
+.section2 {
+    color: darkgreen;
+    visibility: visible;
+}
+
+.button {
+    align-self: center;
+}
