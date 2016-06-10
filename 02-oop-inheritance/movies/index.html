@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script type="text/javascript" src="actor.js"></script>
+    <script type="text/javascript" src="social.js"></script>
     <script type="text/javascript" src="logger.js"></script>
     <script type="text/javascript" src="eventEmitter.js"></script>
     <script type="text/javascript" src="movie.js"></script>
@@ -15,10 +17,29 @@
 
 
         var terminator = new Movie("Terminator", "2000", "145min");
-        var logger = new Logger();
-        terminator.on("play", logger.log);
+//        var logger = new Logger();
+//        terminator.on("play", logger.log);
+//        console.log(terminator);
+//        terminator.play();
+//
+//
+//        social = new Social();
+//        terminator = Object.assign(social);
+//        terminator.share('Mateo Parodi');
+
+        let arnold = new Actor('Arnold Schwarzenegger', 50);
+        let otherCast = [
+            new Actor('Paul Winfield', 50),
+            new Actor('Michael Biehn', 50),
+            new Actor('Linda Hamilton', 50)
+        ];
+
+        terminator.addCast(arnold);
+        terminator.addCast(otherCast);
+
         console.log(terminator);
-        terminator.play();
+
+
     </script>
 </body>
 </html>
