@@ -1,5 +1,5 @@
 class Logger {
-    log(info) {
-        console.log(info);
+    log() {
+        console.log('The "play" event has been emitted');
     }
 }
