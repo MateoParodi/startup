@@ -26,9 +26,9 @@
         terminator.play();
 
 
-//        social = new Social();
-//        terminator = Object.assign(social);
-//        terminator.share('Mateo Parodi');
+        Object.assign(terminator, social);
+        terminator.share('Mateo Parodi');
+        terminator.like('Mateo Parodi');
 
         let arnold = new Actor('Arnold Schwarzenegger', 50);
         let otherCast = [
