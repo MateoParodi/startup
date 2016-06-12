@@ -1,4 +1,4 @@
-var social = {
+let social = {
 
     share: function(friendName){
         console.log(`Share ${this.title} with ${friendName}`);
