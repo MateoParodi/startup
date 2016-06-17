@@ -2,17 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="stylesheet.css"/>
+    <link rel="stylesheet" type="text/css" href="CSS/stylesheet.css"/>
+
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
-    <script type="text/javascript" src="script.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-route.min.js"></script>
+    <script type="text/javascript" src="JS/script.js"></script>
     <title>Angular js</title>
 
 
 </head>
 
 <body data-ng-app="myApp" data-ng-controller="MoviesController" >
-
-
 
     <h1>Movies List</h1>
 
@@ -24,6 +24,7 @@
             <li class="item">{{movie.title}} - {{movie.year}} - {{movie.duration}}
                 <button class="btn btn-remove"  data-ng-click="remove($index)">Remove</button>
                 <button class="btn btn-edit"  data-ng-click="edit(movie, $index)" data-ng-hide="formVisibility1" >Edit</button>
+                <button class="btn btn-details" data-ng-click="setRoute(movie)">Details</button>
             </li>
 
         </div>
@@ -60,6 +61,10 @@
             <button class="btn btn-save" data-ng-click="update()">Update</button>
             <button class="btn btn-save" data-ng-click="cancelEdit()">Cancel</button>
     </div>
+
+    <div data-ng-view></div>
+
+
 
 </body>
 </html>

@@ -73,6 +73,7 @@ label {
     -webkit-border-radius: 5px;
     border: 1px solid rgba(0,0,0,0.3);
     border-bottom-width: 3px;
+    cursor: pointer;
 }
 
 .btn:hover {
@@ -131,5 +132,24 @@ label {
 
 .btn.btn-edit:active {
     background-color: #3C677B;
+    border-color: rgba(0,0,0,0.9);
+}
+
+.btn-details {
+    float: right;
+    margin-left: 2px;
+    background-color: #37b671;
+    border-color: rgba(0,0,0,0.3);
+    text-shadow: 0 1px 0 rgba(0,0,0,0.5);
+    color: #FFF;
+}
+
+.btn.btn-details:hover {
+    background-color: #2aa241;
+    border-color: rgba(0,0,0,0.5);
+}
+
+.btn.btn-details:active {
+    background-color: #307b48;
     border-color: rgba(0,0,0,0.9);
 }

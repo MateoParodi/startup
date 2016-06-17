@@ -1,6 +1,16 @@
-var myApp = angular.module('myApp', []);
+var myApp = angular.module('myApp', ['ngRoute']);
 
-myApp.controller('MoviesController', ['$scope', function ($scope){
+myApp.config(function ($routeProvider) {
+    $routeProvider
+        .when('/details',{
+            templateUrl: 'Views/details.html'
+        })
+        .otherwise({
+            redirectTo: '/'
+        })
+});
+
+myApp.controller('MoviesController', ['$scope', '$location', function ($scope,$location){
 
     $scope.formVisibility=true;
     $scope.formVisibility1=false;
@@ -15,18 +25,20 @@ myApp.controller('MoviesController', ['$scope', function ($scope){
 
 
     $scope.save=function () {
+        $location.path('/'); 
         $scope.movies.push({title:$scope.newMovie.title, year:$scope.newMovie.year, duration:$scope.newMovie.duration+'min' });
         $scope.newMovie = null;
     };
 
     $scope.remove=function (index) {
+        $location.path('/');
         console.log('Movie ', $scope.movies[index].title ,' removed...!!')
         $scope.movies.splice(index, 1);
         console.log('ALL THE MOVIES:', $scope.movies);
     };
 
     $scope.edit = function(movie, index) {
-
+        $location.path('/');
         $scope.formVisibility1=true;
         $scope.formVisibility=false;
         selectedMovie = movie;
@@ -51,5 +63,9 @@ myApp.controller('MoviesController', ['$scope', function ($scope){
         $scope.formVisibility=true;
         $scope.newMovie = null;
     };
+    
+    $scope.setRoute=function () {
+        $location.path('details');
+    }
 
 }]);
