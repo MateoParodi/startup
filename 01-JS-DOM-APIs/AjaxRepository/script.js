@@ -2,7 +2,7 @@ function getRepository(){
 
 
     var containerList = document.getElementById("repoList");
-
+    containerList.innerHTML = '';
     $.ajax({
         url: "https://api.github.com/search/repositories",
         type: 'GET',

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script type="text/javascript" src="actor.js"></script>
+    <script type="text/javascript" src="social.js"></script>
+    <script type="text/javascript" src="logger.js"></script>
+    <script type="text/javascript" src="eventEmitter.js"></script>
+    <script type="text/javascript" src="movie.js"></script>
+    <meta charset="UTF-8">
+    <title>Topic 2</title>
+
+</head>
+<body>
+    <h2>Movies Exercise</h2>
+    <p>All in console!</p>
+
+    <script type="text/javascript">
+//        console.log(movie1);
+//        movie1.play();
+
+
+        var terminator = new Movie("Terminator", 1984, 90);
+        var logger = new Logger();
+        terminator.on("play", logger.log);
+        console.log(terminator);
+        terminator.play();
+
+
+        Object.assign(terminator, social);
+        terminator.share('Mateo Parodi');
+        terminator.like('Maria Jose Quiroga');
+
+        let arnold = new Actor('Arnold Schwarzenegger', 50);
+        let otherCast = [
+            new Actor('Paul Winfield', 50),
+            new Actor('Michael Biehn', 50),
+            new Actor('Linda Hamilton', 50)
+        ];
+
+        terminator.addCast(arnold);
+        console.log('Adding Arnold to cast...');
+        terminator.addCast(otherCast);
+        console.log('Adding some actors to cast...');
+        console.log(terminator);
+
+
+    </script>
+</body>
+</html>
