@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <title>Angular js</title>
+
+
+</head>
+
+<body data-ng-app="myApp" data-ng-controller="MoviesController" >
+
+
+
+    <h1>Movies List</h1>
+
+
+    <div class="mainContainer">
+
+        <div class="container" data-ng-repeat="movie in movies" >
+
+            <li class="item">{{movie.title}} - {{movie.year}} - {{movie.duration}}
+                <button class="btn btn-remove"  data-ng-click="remove($index)">Remove</button>
+                <button class="btn btn-edit"  data-ng-click="edit(movie, $index)" data-ng-hide="formVisibility1" >Edit</button>
+            </li>
+
+        </div>
+
+    </div>
+
+
+
+
+
+    <div class="mainContainer" data-ng-show="formVisibility">
+
+        <h2 class="addTitle">Add a Movie!</h2>
+
+            <label>Title:</label>  <input class="imputBox" type="text" data-ng-model="newMovie.title"/>
+            <label>Year:</label>  <input class="imputBox" type="text" data-ng-model="newMovie.year"/>
+            <label>Duration:</label> <input class="imputBox" type="text" data-ng-model="newMovie.duration"/>
+
+            <button class="btn btn-save" data-ng-click="save()">Save!</button>
+    </div>
+
+
+
+
+
+    <div class="editContainer" data-ng-show="formVisibility1">
+
+        <h2 class="addTitle">Edit the Movie!</h2>
+
+            <label>Title:</label> <input class="imputBox" type="text" data-ng-model="newMovie.title">
+            <label>Year:</label>  <input class="imputBox" type="text" data-ng-model="newMovie.year"/>
+            <label>Duration:</label> <input class="imputBox" type="text" data-ng-model="newMovie.duration"/>
+
+            <button class="btn btn-save" data-ng-click="update()">Update</button>
+            <button class="btn btn-save" data-ng-click="cancelEdit()">Cancel</button>
+    </div>
+
+</body>
+</html>
