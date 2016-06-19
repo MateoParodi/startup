@@ -31,7 +31,7 @@ label {
 }
 
 .editContainer {
-    width: 710px;
+    width: 650px;
     margin: 0 auto;
     box-shadow: 5px 5px 5px #555;
     background: #fff;
@@ -45,8 +45,8 @@ label {
     padding: 10px;
 }
 
-.imputBox {
-    width: 120px;
+.inputBox, .inputBoxDesc, .inputBoxDescEdit {
+    width: 150px;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -59,6 +59,7 @@ label {
     -moz-border-radius: 3px;
     padding: 7px;
     outline: none;
+    margin: 3px;
 }
 
 .btn {
@@ -152,4 +153,21 @@ label {
 .btn.btn-details:active {
     background-color: #307b48;
     border-color: rgba(0,0,0,0.9);
+}
+
+.inputBoxDesc {
+    width: 450px;
+    height: 32px;
+    padding: 2px;
+
+}
+
+.inputBoxDescEdit {
+    width: 355px;
+    height: 32px;
+    padding: 2px;
+}
+
+.wrapper {
+    text-align: center;
 }

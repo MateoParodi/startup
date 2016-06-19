@@ -1,22 +1,22 @@
 a {
     margin-left: 25px;
-    font-family: Calibri;
+    font-family: Calibri, sans-serif;
     margin-top: 0px;
 }
 
 h2 {
     margin-bottom: 0px;
-    font-family: Calibri;
+    font-family: Calibri, sans-serif;
 }
 
 h1 {
     margin-bottom: 0px;
-    font-family: Calibri;
+    font-family: Calibri, sans-serif;
 }
 
 h5 {
     margin-top: 0px;
-    font-family: Calibri;
+    font-family: Calibri, sans-serif;
 }
 
 fieldset{
