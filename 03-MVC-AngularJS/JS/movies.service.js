@@ -6,8 +6,16 @@ angular.module("myApp").factory("MoviesService", ["$window" , function($window) 
         return JSON.parse($window.localStorage.getItem("movies"));
     };
     
-    exports.getMovie = function(id) {
+    exports.getMovie = function(name) {
+        let movies = this.getMovies();
+
+        for (var i = 0, len = movies.length; i < len; i++){
+            if (name === movies[i].title){
+                var movie = movies[i];
+            }
+        }
         
+        return movie;
     };
 
     exports.saveMovie = function(movie) {

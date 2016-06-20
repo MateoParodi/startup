@@ -1,0 +1,38 @@
+.detMainContainer {
+    text-align: center;
+    margin: 12px;
+    display: inline-flex;
+}
+
+.detContainer {
+    text-align: center;
+}
+
+#descriptionMovie {
+    width: 400px;
+    text-align: justify;
+    margin: 12px;
+}
+
+.detInfo {
+    text-align: center;
+}
+
+#yearMovie{
+    font-style: italic;
+    font-weight: 500;
+    margin: 1px;
+    font-family: Calibri, sans-serif;
+}
+
+#titleMovie {
+    margin: 0px;
+    font-family: Constantia, sans-serif;
+}
+
+#durationMovie {
+    font-style: italic;
+    font-weight: 500;
+    margin: 1px;
+    font-family: Calibri, sans-serif;
+}

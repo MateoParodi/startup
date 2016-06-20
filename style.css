@@ -22,12 +22,18 @@ h5 {
 fieldset{
     margin: 5px;
     border-color: black;
+    box-shadow: 5px 5px 5px #555;
+    background: #fff;
+    border-radius: 15px;
+    padding: 10px;
+    margin-bottom: 15px;
 }
 
 .pic{
-    width: 75px;
-    height:75px;
+    width: 80px;
+    height:80px;
     margin-left: 6px;
+    border-radius: 40px;
 }
 
 .presentation {

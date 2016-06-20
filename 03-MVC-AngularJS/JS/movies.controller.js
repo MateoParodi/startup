@@ -12,6 +12,7 @@ myApp.controller('MoviesController', ['$scope', '$location', 'MoviesService', fu
 
     $scope.movies = MoviesService.getMovies();
 
+
     $scope.save=function () {
         $location.path('/');
         MoviesService.saveMovie({title:$scope.newMovie.title, year:$scope.newMovie.year, duration:$scope.newMovie.duration+'min', description:$scope.newMovie.description });

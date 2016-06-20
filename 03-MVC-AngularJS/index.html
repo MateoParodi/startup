@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="CSS/stylesheet.css"/>
+    <link rel="stylesheet" type="text/css" href="CSS/detailsStyle.css"/>
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-route.min.js"></script>
@@ -21,7 +22,7 @@
 
 
     <div class="mainContainer">
-
+        <h3 id="yeah"></h3>
         <div class="container" data-ng-repeat="movie in movies" >
 
             <li class="item">{{movie.title}} - {{movie.year}} - {{movie.duration}}
