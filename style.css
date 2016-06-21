@@ -1,3 +1,7 @@
+body {
+    background: url("Resources/seamlessbrick.jpg");
+}
+
 a {
     margin-left: 25px;
     font-family: Calibri, sans-serif;
@@ -16,6 +20,7 @@ h1 {
 
 h5 {
     margin-top: 0px;
+    margin-left: 2px;
     font-family: Calibri, sans-serif;
 }
 
@@ -23,17 +28,17 @@ fieldset{
     margin: 5px;
     border-color: black;
     box-shadow: 5px 5px 5px #555;
-    background: #fff;
     border-radius: 15px;
     padding: 10px;
     margin-bottom: 15px;
+    background-color: rgba(256, 256, 256, .55);
 }
 
 .pic{
-    width: 80px;
-    height:80px;
+    width: 120px;
+    height:120px;
     margin-left: 6px;
-    border-radius: 40px;
+    border-radius: 60px;
 }
 
 .presentation {

@@ -9,7 +9,7 @@
 }
 
 #descriptionMovie {
-    width: 400px;
+    width: 370px;
     text-align: justify;
     margin: 12px;
 }
@@ -35,4 +35,13 @@
     font-weight: 500;
     margin: 1px;
     font-family: Calibri, sans-serif;
+}
+
+.btn.btn-save.home {
+    margin-bottom: 15px;
+}
+
+.moviePic {
+    height: 100%;
+    width: 100%;
 }
