@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script type="text/javascript" src="logger.js"></script>
+    <script type="text/javascript" src="eventEmitter.js"></script>
+    <script type="text/javascript" src="movie.js"></script>
+    <meta charset="UTF-8">
+    <title>Topic 2</title>
+
+</head>
+<body>
+    <script type="text/javascript">
+//        console.log(movie1);
+//        movie1.play();
+
+
+        var terminator = new Movie("Terminator", "2000", "145min");
+        var logger = new Logger();
+        terminator.on("play", logger.log);
+console.log(terminator);
+        terminator.play();
+    </script>
+</body>
+</html>
