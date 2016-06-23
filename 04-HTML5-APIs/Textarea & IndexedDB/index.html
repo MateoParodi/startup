@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="/Resources/faviconhtml.ico" />
+    <link href="CSS/stylesheet.css" type="text/css" rel="stylesheet"/>
+    <title>HTML5-API Exercise</title>
+</head>
+<body>
+<h1 class="mainTitle">Textarea & IndexedDB!</h1>
+<h3 class="subTitle">Data will be stored in localStorage and IndexedDB</h3>
+    <section class="container">
+
+        <form id="form">
+            <div>
+            <input id="id" type="number" min="0" placeholder="Insert id..."/>
+            </div>
+
+            <textarea class="text" id="text" placeholder="Please insert text..."></textarea>
+
+            <div>
+                <button class="btn btn-save" id="btnSave" type="button">Save!</button>
+                <button class="btn btn-remove" id="btnRemove" type="button" onclick="removeAll()">Remove!</button>
+            </div>
+        </form>
+
+    </section>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script type="text/javascript" src="JS/script.js"></script>
+
+
+</body>
+</html>

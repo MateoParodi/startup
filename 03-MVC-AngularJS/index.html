@@ -46,9 +46,9 @@
 
         <h2 class="addTitle">Add a Movie!</h2>
         <form name="addForm">
-            <label>Title:</label>  <input class="inputBox" type="text" data-ng-model="newMovie.title" data-ng-required="true"/>
-            <label>Year:</label>  <input class="inputBox" type="text" data-ng-model="newMovie.year" data-ng-required="true"/>
-            <label>Duration:</label> <input class="inputBox" type="text" data-ng-model="newMovie.duration" data-ng-required="true"/>
+            <label>Title:</label>  <input class="inputBox" type="text" maxlength="30" data-ng-model="newMovie.title" data-ng-required="true"/>
+            <label>Year:</label>  <input class="inputBox" type="number" min="1800" max="2020" data-ng-model="newMovie.year" data-ng-required="true"/>
+            <label>Duration:</label> <input class="inputBox" type="number" min="100" max="500" data-ng-model="newMovie.duration" data-ng-required="true"/>
             <label>Description:</label> <input class="inputBoxDesc" type="text" data-ng-model="newMovie.description" data-ng-required="false"></input>
 
             <button class="btn btn-save" type="submit" data-ng-click="addForm.$valid && save()">Save!</button>
@@ -64,9 +64,9 @@
         <h2 class="addTitle">Edit the Movie!</h2>
 
         <form name="editForm">
-            <label>Title:</label> <input class="inputBox" type="text" data-ng-model="editMovie.title" data-ng-required="true"/>
-            <label>Year:</label>  <input class="inputBox" type="text" data-ng-model="editMovie.year" data-ng-required="true"/>
-            <label>Duration:</label> <input class="inputBox" type="text" data-ng-model="editMovie.duration" data-ng-required="true"/>
+            <label>Title:</label> <input class="inputBox" type="text"  maxlength="30"  data-ng-model="editMovie.title" data-ng-required="true"/>
+            <label>Year:</label>  <input class="inputBox" type="number" min="1800" max="2020" data-ng-model="editMovie.year" data-ng-required="true"/>
+            <label>Duration:</label> <input class="inputBox" type="number" min="1800" max="2020" data-ng-model="editMovie.duration" data-ng-required="true"/>
             <label>Description:</label> <input class="inputBoxDescEdit" type="text" data-ng-model="editMovie.description" data-ng-required="false"/>
 
             <button class="btn btn-save btn-update" data-ng-click="editForm.$valid && update()">Update</button>
