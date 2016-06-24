@@ -1,5 +1,6 @@
 var db;
-
+var fileLength;
+var files;
 function start() {
 
     dataZone = document.getElementById('data');
@@ -29,15 +30,18 @@ function start() {
 
 function addObject() {
 
-    var textSaved = document.getElementById('drop_zone').value;
-
     var id = document.getElementById('id').value;
+
+    if(id === ''){
+        return;
+    }
+
 
     var transaction = db.transaction(['texts'],'readwrite');
 
     var almacen = transaction.objectStore('texts');
 
-    var add = almacen.add({id: id, text: textSaved});
+    var add = almacen.add({id: id, text: file});
 
 
     window.localStorage.setItem(id, file);
@@ -66,20 +70,72 @@ function handleFileSelect(evt) {
     evt.stopPropagation();
     evt.preventDefault();
 
-    var files = evt.dataTransfer.files; // FileList object.
-
+    files = evt.dataTransfer.files; // FileList object.
+    fileLength = files.length;
     file = files[0].name;
 
     // files is a FileList of File objects. List some properties.
     var output = [];
     for (var i = 0, f; f = files[i]; i++) {
-        output.push('<li><strong>', escape(f.name), '</strong> (', f.type || 'n/a', ') - ',
+        output.push('<img src="/Resources/txt-icon.png" class="imgText">','</img>','<strong>', escape(f.name), '</strong> (', f.type || 'n/a', ') - ',
             f.size, ' bytes, last modified: ',
-            f.lastModifiedDate ? f.lastModifiedDate.toLocaleDateString() : 'n/a',
-            '</li>');
+            f.lastModifiedDate ? f.lastModifiedDate.toLocaleDateString() : 'n/a');
     }
     document.getElementById('list').innerHTML = '<ul>' + output.join('') + '</ul>';
 }
+
+function abortRead() {
+    document.getElementById('byte_content').textContent = '';
+}
+
+function readBlob(opt_startByte, opt_stopByte) {
+
+    if (files === undefined) {
+        alert('Please drag a file!');
+        return;
+    }
+
+
+    var file = files[0];
+
+    var start = parseInt(opt_startByte) || 0;
+    var stop = parseInt(opt_stopByte) || file.size - 1;
+
+    var reader = new FileReader();
+
+    // If we use onloadend, we need to check the readyState.
+    reader.onloadend = function(evt) {
+        if (evt.target.readyState == FileReader.DONE) { // DONE == 2
+            document.getElementById('byte_content').textContent = evt.target.result;
+            document.getElementById('byte_content').style.display = 'block';
+        }
+    };
+
+
+
+    var blob = file.slice(start, stop + 1);
+    reader.readAsBinaryString(blob);
+}
+
+document.querySelector('.readBytesButtons').addEventListener('click', function(evt) {
+    if (evt.target.tagName.toLowerCase() == 'button') {
+        readBlob(null, null);
+    }
+}, false);
+
+
+
+var close = document.getElementsByClassName("closebtn");
+var i;
+
+for (i = 0; i < close.length; i++) {
+    close[i].onclick = function(){
+        var div = this.parentElement;
+        div.style.opacity = "0";
+        setTimeout(function(){ div.style.display = "none"; }, 600);
+    }
+}
+
 
 function handleDragOver(evt) {
     evt.stopPropagation();

@@ -2,42 +2,50 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="shortcut icon" href="/Resources/faviconhtml.ico" />
+    <link rel="shortcut icon" href="/Resources/faviconhtml.ico"/>
     <link href="CSS/stylesheet.css" type="text/css" rel="stylesheet"/>
     <title>HTML5-API Exercise</title>
 </head>
 <body>
 <h1 class="mainTitle">Drag & Drop Texts!</h1>
 <h3 class="subTitle">Data will be stored in localStorage and IndexedDB</h3>
-    <section class="container">
+<section class="container">
 
-        <form>
-            <div>
-            <input id="id" type="number" min="0" placeholder="Insert id..."/>
-            </div>
+    <form>
+        <div>
+            <input id="id" type="number" min="0" placeholder="Insert id..." required/>
+        </div>
 
-            <div class="drop_zone" id="drop_zone">Drop files here...</div>
+        <div class="drop_zone" id="drop_zone">Drop files here...</div>
 
-            <div>
-                <button class="btn btn-save" id="btnSave" type="button">Save!</button>
-                <button class="btn btn-remove" id="btnRemove" type="button" onclick="removeAll()">Remove!</button>
-            </div>
-        </form>
+        <div>
+            <button class="btn btn-save" id="btnSave" type="submit">Save!</button>
+            <button class="btn btn-remove" id="btnRemove" type="button" onclick="removeAll()">Remove!</button>
+        </div>
+    </form>
 
-    </section>
+</section>
 
-    <section class="container">
+<section class="container">
+
+    <output id="list">
+        <div id="imgText>"></div>
+    </output>
+
+        <span class="readBytesButtons">
+            <button>Read file!</button>
+
+         </span>
+    <button onclick="abortRead();">Cancel read</button>
+
+    <div id="byte_content"></div>
+
+</section>
 
 
-
-        <output id="list"></output>
-
-    </section>
-
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-    <script type="text/javascript" src="JS/script.js"></script>
-    <script type="text/javascript" src="JS/dragVisualEffects.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script type="text/javascript" src="JS/script.js"></script>
+<script type="text/javascript" src="JS/dragVisualEffects.js"></script>
 
 
 </body>

@@ -6,7 +6,8 @@ myApp.controller('MoviesController', ['$scope', '$location', 'MoviesService', fu
         title : null,
         year : null,
         duration : null,
-        description : null
+        description : null,
+        image: null
     };
 
 
@@ -15,7 +16,7 @@ myApp.controller('MoviesController', ['$scope', '$location', 'MoviesService', fu
 
     $scope.save=function () {
         $location.path('/');
-        MoviesService.saveMovie({title:$scope.newMovie.title, year:$scope.newMovie.year, duration:$scope.newMovie.duration+'min', description:$scope.newMovie.description });
+        MoviesService.saveMovie({title:$scope.newMovie.title, year:$scope.newMovie.year, duration:$scope.newMovie.duration, description:$scope.newMovie.description, image:$scope.newMovie.image });
         $scope.movies = MoviesService.getMovies();
         $scope.newMovie = null;
     };

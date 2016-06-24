@@ -52,7 +52,7 @@ label {
 
 }
 
-.inputBox, .inputBoxDesc, .inputBoxDescEdit {
+.inputBox, .inputBoxDesc, .inputBoxDescEdit, .inputBoxImg, .inputBoxImgEdit {
     width: 150px;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -163,19 +163,35 @@ label {
 }
 
 .inputBoxDesc {
-    width: 450px;
+    width: 534px;
     height: 32px;
     padding: 2px;
 
 }
 
 .inputBoxDescEdit {
-    width: 355px;
+    width: 534px;
     height: 32px;
     padding: 2px;
 }
 
 .wrapper {
     text-align: center;
+}
+
+.inputBoxImg {
+    width: 450px;
+    height: 32px;
+    padding: 2px;
+    margin-left: 12px;
+
+}
+
+.inputBoxImgEdit {
+    width: 354px;
+    height: 32px;
+    padding: 2px;
+    margin-left: 12px;
+
 }
 

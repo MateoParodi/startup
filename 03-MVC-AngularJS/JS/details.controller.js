@@ -10,8 +10,9 @@ myApp.controller('DetailsController', ['$scope','$location','MoviesService','$ro
         var movie = MoviesService.getMovie(title);
         document.getElementById('titleMovie').innerText = movie.title;
         document.getElementById('yearMovie').innerText = movie.year;
-        document.getElementById('durationMovie').innerText = movie.duration ;
+        document.getElementById('durationMovie').innerText = movie.duration + ' min' ;
         document.getElementById('descriptionMovie').innerText = movie.description;
+        document.getElementById("imageMovie").src= movie.image;
 
     }
 
