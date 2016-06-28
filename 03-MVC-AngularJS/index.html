@@ -28,7 +28,7 @@
     <h3 id="yeah"></h3>
     <div class="container" data-ng-repeat="movie in movies" >
 
-        <li class="item">{{movie.title}} - {{movie.year}} - {{movie.duration}}
+        <li class="item">{{movie.title}} - {{movie.year}} - {{movie.duration}}min
             <button class="btn btn-remove"  data-ng-click="remove($index)">Remove</button>
             <button class="btn btn-edit"  data-ng-click="edit(movie, $index)" data-ng-hide="formVisibility1" >Edit</button>
             <button class="btn btn-details" data-ng-click="setRoute(movie)">Details</button>
@@ -48,7 +48,7 @@
     <form name="addForm">
         <label>Title:</label>  <input class="inputBox" type="text" maxlength="30" data-ng-model="newMovie.title" data-ng-required="true"/>
         <label>Year:</label>  <input class="inputBox" type="number" min="1800" max="2020" data-ng-model="newMovie.year" data-ng-required="true"/>
-        <label>Duration:</label> <input class="inputBox" type="number" min="100" max="500" data-ng-model="newMovie.duration" data-ng-required="true"/>
+        <label>Duration:</label> <input class="inputBox" type="number" min="20" max="500" data-ng-model="newMovie.duration" data-ng-required="true"/>
         <label>Description:</label> <input class="inputBoxDesc" type="text" data-ng-model="newMovie.description" data-ng-required="false"></input>
         <label>ImageURL:</label> <input class="inputBoxImg" type="text" data-ng-model="newMovie.image" data-ng-required="false"></input>
 
@@ -67,7 +67,7 @@
     <form name="editForm">
         <label>Title:</label> <input class="inputBox" type="text"  maxlength="30"  data-ng-model="editMovie.title" data-ng-required="true"/>
         <label>Year:</label>  <input class="inputBox" type="number" min="1800" max="2020" data-ng-model="editMovie.year" data-ng-required="true"/>
-        <label>Duration:</label> <input class="inputBox" type="number" min="100" max="500" data-ng-model="editMovie.duration" data-ng-required="true"/>
+        <label>Duration:</label> <input class="inputBox" type="number" min="20" max="500" data-ng-model="editMovie.duration" data-ng-required="true"/>
         <label>Description:</label> <input class="inputBoxDescEdit" type="text" data-ng-model="editMovie.description" data-ng-required="false"/>
         <label>ImageURL:</label> <input class="inputBoxImgEdit" type="text" data-ng-model="editMovie.image" data-ng-required="false"/>
 

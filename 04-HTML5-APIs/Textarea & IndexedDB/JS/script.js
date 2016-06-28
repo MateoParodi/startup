@@ -1,8 +1,11 @@
 var db;
-
+/**
+ *
+ * Creates indexedDB.
+ *
+ */
 function start() {
-
-    dataZone = document.getElementById('data');
+    
     btnSave = document.getElementById('btnSave');
 
     btnSave.addEventListener('click', addObject, false);
@@ -26,7 +29,12 @@ function start() {
     }
 }
 
-
+/**
+ *
+ * Creates objectStore and adds objects(text in textarea in this case),
+ * into indexedDB and localStorage.
+ *
+ */
 function addObject() {
 
     var textSaved = document.getElementById('text').value;

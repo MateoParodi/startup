@@ -1,10 +1,14 @@
 var db;
 var fileLength;
 var files;
+/**
+ *
+ * Creates indexedDB.
+ *
+ */
 function start() {
-
-    dataZone = document.getElementById('data');
-    btnSave = document.getElementById('btnSave');
+    
+    var btnSave = document.getElementById('btnSave');
 
     btnSave.addEventListener('click', addObject, false);
 
@@ -27,7 +31,12 @@ function start() {
     }
 }
 
-
+/**
+ *
+ * Creates objectStore and adds objects(file name in this case),
+ * into indexedDB and localStorage.
+ *
+ */
 function addObject() {
 
     var id = document.getElementById('id').value;
@@ -36,19 +45,15 @@ function addObject() {
         return;
     }
 
-
     var transaction = db.transaction(['texts'],'readwrite');
 
     var almacen = transaction.objectStore('texts');
 
+    //save in IndexedDB
     var add = almacen.add({id: id, text: file});
-
-
+    //save in LocalStorage
     window.localStorage.setItem(id, file);
 }
-
-
-
 
 /**
  *
@@ -61,20 +66,19 @@ function removeAll() {
     window.indexedDB.deleteDatabase('database');
 }
 
-
-
-
-
-
+/**
+ *
+ * Print file info (Type, Size, Name, Last modified date)
+ *
+ */
 function handleFileSelect(evt) {
     evt.stopPropagation();
     evt.preventDefault();
 
-    files = evt.dataTransfer.files; // FileList object.
+    files = evt.dataTransfer.files;
     fileLength = files.length;
     file = files[0].name;
 
-    // files is a FileList of File objects. List some properties.
     var output = [];
     for (var i = 0, f; f = files[i]; i++) {
         output.push('<img src="/Resources/txt-icon.png" class="imgText">','</img>','<strong>', escape(f.name), '</strong> (', f.type || 'n/a', ') - ',
@@ -84,17 +88,18 @@ function handleFileSelect(evt) {
     document.getElementById('list').innerHTML = '<ul>' + output.join('') + '</ul>';
 }
 
-function abortRead() {
-    document.getElementById('byte_content').textContent = '';
-}
 
+/**
+ *
+ * Prints file content when 'Read File' button pressed.
+ *
+ */
 function readBlob(opt_startByte, opt_stopByte) {
 
     if (files === undefined) {
         alert('Please drag a file!');
         return;
     }
-
 
     var file = files[0];
 
@@ -103,15 +108,12 @@ function readBlob(opt_startByte, opt_stopByte) {
 
     var reader = new FileReader();
 
-    // If we use onloadend, we need to check the readyState.
     reader.onloadend = function(evt) {
-        if (evt.target.readyState == FileReader.DONE) { // DONE == 2
+        if (evt.target.readyState == FileReader.DONE) {
             document.getElementById('byte_content').textContent = evt.target.result;
             document.getElementById('byte_content').style.display = 'block';
         }
     };
-
-
 
     var blob = file.slice(start, stop + 1);
     reader.readAsBinaryString(blob);
@@ -123,31 +125,22 @@ document.querySelector('.readBytesButtons').addEventListener('click', function(e
     }
 }, false);
 
-
-
-var close = document.getElementsByClassName("closebtn");
-var i;
-
-for (i = 0; i < close.length; i++) {
-    close[i].onclick = function(){
-        var div = this.parentElement;
-        div.style.opacity = "0";
-        setTimeout(function(){ div.style.display = "none"; }, 600);
-    }
+/**
+ *
+ * Cancel reading file when 'Cancel Read' button pressed.
+ *
+ */
+function abortRead() {
+    document.getElementById('byte_content').textContent = '';
 }
 
 
-function handleDragOver(evt) {
-    evt.stopPropagation();
-    evt.preventDefault();
-    evt.dataTransfer.dropEffect = 'copy'; // Explicitly show this is a copy.
-}
-
-// Setup the dnd listeners.
+/**
+ *
+ * Setup listeners
+ *
+ */
 var dropZone = document.getElementById('drop_zone');
-
-dropZone.addEventListener('dragover', handleDragOver, false);
 dropZone.addEventListener('drop', handleFileSelect, false);
-
 
 window.addEventListener('load', start, false);

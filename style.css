@@ -8,6 +8,10 @@ a {
     margin-top: 0px;
 }
 
+a:hover {
+    color: darkred;
+}
+
 h2 {
     margin-bottom: 0px;
     font-family: Calibri, sans-serif;
