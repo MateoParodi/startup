@@ -28,7 +28,7 @@
     <h3 id="yeah"></h3>
     <div class="container" data-ng-repeat="movie in movies" >
 
-        <li class="item">{{movie.title}} - {{movie.year}} - {{movie.duration}}
+        <li class="item">{{movie.title}} - {{movie.year}} - {{movie.duration}}min
             <button class="btn btn-remove"  data-ng-click="remove($index)">Remove</button>
             <button class="btn btn-edit"  data-ng-click="edit(movie, $index)" data-ng-hide="formVisibility1" >Edit</button>
             <button class="btn btn-details" data-ng-click="setRoute(movie)">Details</button>
