@@ -112,7 +112,7 @@ var MoviesForm = React.createClass({
                     value={this.state.description}
                     onChange={this.handleDescriptionChange}
                 />
-                <input type="submit" value="Add!"/>
+                <input className="buttonAdd" type="submit" value="Add!"/>
             </form>
 
         );
@@ -130,9 +130,9 @@ var Movie = React.createClass({
         return (
             <div className="moviesList">
                 <ul>
-                    <li>
-                        <b>{this.props.title}</b> - {this.props.year} - {this.props.children} - {this.props.duration}min
-                        <button className="removeButton" onClick={this.handleClick}>remove</button>
+                    <li className="item">
+                        <b>{this.props.title}</b> - {this.props.year} - {this.props.children} - <i>{this.props.duration}min</i>
+                        <button className="removeButton" onClick={this.handleClick}>X</button>
                     </li>
                 </ul>
             </div>
