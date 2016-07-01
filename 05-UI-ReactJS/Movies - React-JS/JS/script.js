@@ -98,4 +98,5 @@ var Movie = React.createClass({
     }
 });
 
+
 ReactDOM.render(<MoviesBox movies={moviesObject}/>, document.getElementById('content'));
