@@ -5,7 +5,11 @@ var moviesObject = [
     {id: 4, title: "Fight Club", year: 1999, duration: 81, description: 'Some freak guy messing around'}
 ];
 
-
+/**
+ *
+ * MoviesBox Component
+ *
+ */
 var MoviesBox = React.createClass({
     handleMovieSubmit: function (movie) {
         moviesObject.push(movie);
@@ -32,7 +36,11 @@ var MoviesBox = React.createClass({
         );
     }
 });
-
+/**
+ *
+ * MoviesList Component
+ *
+ */
 var MoviesList = React.createClass({
     handleDelete: function (movieTile) {
         return this.props.del(movieTile);
@@ -54,7 +62,11 @@ var MoviesList = React.createClass({
         );
     }
 });
-
+/**
+ *
+ * MoviesForm Component
+ *
+ */
 var MoviesForm = React.createClass({
     getInitialState: function () {
         return {title: '', description: '', year: '', duration: ''};
@@ -118,7 +130,11 @@ var MoviesForm = React.createClass({
         );
     }
 });
-
+/**
+ *
+ * Movie Component
+ *
+ */
 var Movie = React.createClass({
     handleClick: function (e) {
         e.preventDefault();
