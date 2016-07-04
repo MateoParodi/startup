@@ -258,24 +258,24 @@ input {
     color: white;
     text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.2);
     border: 1px solid;
-    border-color: #9b5b31 #9b5b31 #9b5b31;
-    background: #fba967;
+    border-color: #00b60c #00da0c #00da0c;
+    background: #48fb4e;
     border-radius: 4px;
-    background-image: -webkit-linear-gradient(top, #9b8767, #9b7859 40%, #9b663e);
-    background-image: -moz-linear-gradient(top, #9b8767, #9b7859 40%, #9b663e);
-    background-image: -o-linear-gradient(top, #9b8767, #9b7859 40%, #9b663e);
-    background-image: linear-gradient(to bottom, #9b8767, #9b7859 40%, #9b663e);
+    background-image: -webkit-linear-gradient(top, #54c255, #06ff45 40%, #00b60c);
+    background-image: -moz-linear-gradient(top, #54c255, #06ff45 40%, #00b60c);
+    background-image: -o-linear-gradient(top, #54c255, #06ff45 40%, #00b60c);
+    background-image: linear-gradient(to bottom, #54c255, #06ff45 40%, #00b60c);
     -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .editButton:active {
     cursor: pointer;
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-    border-color: #9b5b31 #9b5b31 #9b5b31;
-    background-image: -webkit-linear-gradient(top, #9b5b31, #9b663e);
-    background-image: -moz-linear-gradient(top, #9b5b31, #9b663e);
-    background-image: -o-linear-gradient(top, #9b5b31, #9b663e);
-    background-image: linear-gradient(to bottom, #9b5b31, #9b663e);
+    border-color: #00b60c #00da0c #00da0c;
+    background-image: -webkit-linear-gradient(top, #00b60c, #3d9b2f);
+    background-image: -moz-linear-gradient(top, #00b60c, #3d9b2f);
+    background-image: -o-linear-gradient(top, #00b60c, #3d9b2f);
+    background-image: linear-gradient(to bottom, #00b60c, #3d9b2f);
     -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1), 0 1px rgba(255, 255, 255, 0.5);
     box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1), 0 1px rgba(255, 255, 255, 0.5);
 }
