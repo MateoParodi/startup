@@ -195,7 +195,7 @@ var MoviesForm = React.createClass({
         this.setState({title: e.target.value.substr(0, 30)});
     },
     handleDescriptionChange: function (e) {
-        this.setState({description: e.target.value.substr(0, 50)});
+        this.setState({description: e.target.value.substr(0, 45)});
     },
     handleYearChange: function (e) {
         this.setState({year: e.target.value.substr(0, 4)});
