@@ -11,9 +11,8 @@ h1{
     text-shadow: 0px 2px 0px #fff;
 }
 
-
 #content {
-    width: 650px;
+    width: 800px;
     margin: 0 auto;
     box-shadow: 5px 5px 5px #555;
     background: #fff;
@@ -25,9 +24,10 @@ h1{
     border-style: solid;
 }
 
-ul{
-
-}
 li {
     text-align: justify;
+}
+
+.removeButton {
+    float: right;
 }
