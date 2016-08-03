@@ -1,0 +1,23 @@
+td {
+    padding: 10px;
+    border: 1px solid black;
+
+}
+table{
+    text-align: center;
+    width: 35%;
+    table-layout: fixed;
+    border: 2px solid darkred;
+    margin-bottom: 15px;
+
+
+}
+
+.mainContainer{
+    text-align: center;
+}
+
+.box{
+    margin: 2px;
+}
+
